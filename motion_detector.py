@@ -72,8 +72,8 @@ while True:
             times.append(datetime.now())
         break
 
-print(status_list)
-print(times)
+# print(status_list)
+# print(times)
 
 for i in range(0, len(times),2):
     df = df.append({"Start":times[i],"End":times[i+1]}, ignore_index=True)
