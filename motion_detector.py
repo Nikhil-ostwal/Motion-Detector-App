@@ -1,10 +1,9 @@
-from datetime import datetime
-from tabnanny import check
 import time
+import cv2
 import pandas
 from pandas import DataFrame
-import cv2
-from datetime import datetime
+from datetime import datetime 
+
 
 first_frame = None
 status_list = [None,None]
@@ -19,7 +18,7 @@ while True:
 
     # Set initial frame
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-    gray = cv2.GaussianBlur(gray,(21,21),0) 
+    gray = cv2.GaussianBlur(gray,(21,21),0)     
 
     if first_frame is None:
         first_frame = gray
@@ -63,14 +62,12 @@ while True:
 
     key=cv2.waitKey(1)
     
-    
-
-
     # To exit code
     if key == ord('q'):
         if status == 1:
             times.append(datetime.now())
         break
+
 
 # print(status_list)
 # print(times)
